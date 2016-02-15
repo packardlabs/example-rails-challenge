@@ -1,0 +1,12 @@
+.row
+  .col-md-12
+    %h1
+      = title
+      %small (#{charges.count})
+    %table.table
+      %thead
+        %tr
+          %th Charge ID
+          %th Charge amount
+          %th Updated at
+      %tbody= render collection: charges, partial: 'charges/charge'

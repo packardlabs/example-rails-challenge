@@ -1,0 +1,14 @@
+.row
+  .col-md-12
+    .page-header
+      %h1 New charge
+
+.row
+  .col-md-12
+    = simple_form_for @charge, url: charges_path do |f|
+      = f.grouped_collection_select :chargeable, [User, Company], :all, :model_name, :to_global_id, :name
+      = f.input :amount
+      = f.input :paid
+      = f.input :refunded
+
+      = f.submit 'Save', class: 'btn btn-primary'

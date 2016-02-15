@@ -1,0 +1,13 @@
+.row
+  .col-md-12
+    = link_to 'New charge', new_charge_path, class: 'btn btn-primary btn-lg pull-right'
+
+= render 'charges/charges_table', charges: @charges.failed, title: 'Failed charges'
+
+%hr
+
+= render 'charges/charges_table', charges: @charges.disputed, title: 'Disputed charges'
+
+%hr
+
+= render 'charges/charges_table', charges: @charges.successful, title: 'Successful charges'

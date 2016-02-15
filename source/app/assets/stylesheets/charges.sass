@@ -1,0 +1,28 @@
+// Place all the styles related to the charges controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+$successful: green
+$failed: #FF0000
+$disputed: #FF5400
+
+.label
+  &.label-successful
+    background: $successful
+  &.label-failed
+    background: $failed
+  &.label-disputed
+    background: $disputed
+
+tr
+  a
+    text-decoration: underline
+  &.successful
+  &.failed
+    background: $failed
+    a
+      color: #fff
+  &.disputed
+    background: $disputed
+    a
+      color: #fff

@@ -1,0 +1,4 @@
+%tr{class: charge.state}
+  %td= link_to charge.unique_code, charge_path(charge)
+  %td= humanized_money_with_symbol charge.amount
+  %td= timeago_tag charge.updated_at
